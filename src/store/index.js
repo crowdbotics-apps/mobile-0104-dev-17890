@@ -5,8 +5,8 @@ import customRootSaga from "./custom/sagas"
 
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
-import articlesReducer from "../features/Articles/store/reducers"
-import articlesSagas from "../features/Articles/store/sagas"
+import articlesReducer from "../features/ArticleListAndDetail216819/store/reducers"
+import articlesSagas from "../features/ArticleListAndDetail216819/store/sagas"
 
 const sagaMiddleware = createSagaMiddleware();
 
