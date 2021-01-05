@@ -12,6 +12,7 @@ import { article_list } from "./store/actions";
 
 class ArticleList extends Component {
   componentDidMount() {
+    console.log("Load")
     this.props.load();
   }
 
@@ -48,7 +49,7 @@ class ArticleList extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const detail = ownProps.navigation.getParam("detail", "Article");
-
+  console.log(state)
   return {
     detail: detail,
     articles: state.articlesReducer.articles,

@@ -24,6 +24,7 @@ function Article(props) {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("Detail")
   const id = ownProps.navigation.getParam("id", null);
 
   return {
