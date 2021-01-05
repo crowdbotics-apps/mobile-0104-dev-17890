@@ -49,11 +49,12 @@ class Base64ImageField(serializers.ImageField):
 
 
 class ArticleSerializer(serializers.ModelSerializer):
-    image = Base64ImageField(max_length=None, use_url=True, required=False)
+    image = Base64ImageField(max_length=None, required=False)
 
     class Meta:
         model = Article
         fields = [
+            "id",
             "title",
             "body",
             "author",
@@ -61,3 +62,4 @@ class ArticleSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         ]
+        read_only_fields = ["id"]
