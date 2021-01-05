@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const articlesAPI = axios.create({
-  baseURL: 'https://mobile-0104-dev-17890.botics.co/modules',
+  baseURL: 'https://mobile-0104-dev-17890.botics.co/modules/articles/',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -9,9 +9,9 @@ const articlesAPI = axios.create({
 });
 
 export function article_list(action) {
-  return articlesAPI.get(`/articles/`);
+  return articlesAPI.get(`/article/`);
 }
 
 export function article_read(action) {
-  return articlesAPI.get(`/articles/${action.id}/`);
+  return articlesAPI.get(`/article/${action.id}/`);
 }
