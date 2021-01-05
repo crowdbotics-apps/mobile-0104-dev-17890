@@ -5,6 +5,8 @@ import customRootSaga from "./custom/sagas"
 
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
+import articlesReducer from "../features/Articles/store/reducers"
+import articlesSagas from "../features/Articles/store/sagas"
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -18,12 +20,14 @@ const middlewares = [sagaMiddleware /** more middlewares if any goes here */];
 const store = createStore(
   combineReducers({
       apiReducer: apiReducer,
-      customReducer: customReducer
+      customReducer: customReducer,
+    articlesReducer: articlesReducer
   }),
   composeEnhancers(applyMiddleware(...middlewares))
 );
 
 sagaMiddleware.run(rootSaga);
 sagaMiddleware.run(customRootSaga);
+sagaMiddleware.run(articlesSagas);
 
 export { store };
