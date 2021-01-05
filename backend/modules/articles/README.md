@@ -5,3 +5,4 @@ This module contains all needed resources to get the Articles component for Reac
 
 - This module uses media files (Images for articles). You should enable S3 support 
   in your Crowdbotics app in order to get it working properly.
+- You must add `Pillow` as dependency in your backend project. Go to https://pillow.readthedocs.io/ and check how to do this.

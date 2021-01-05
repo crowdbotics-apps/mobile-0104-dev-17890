@@ -13,7 +13,7 @@ class Article(models.Model):
         on_delete=models.PROTECT,
         related_name="article_author",
     )
-    image = models.ImageField(upload_to="articles/", blank=True, null=True)
+    image = models.ImageField(upload_to="mediafiles/articles/", blank=True, null=True)
     created_at = models.DateTimeField(
         auto_now_add=True,
     )

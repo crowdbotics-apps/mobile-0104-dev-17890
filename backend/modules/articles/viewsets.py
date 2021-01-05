@@ -6,7 +6,7 @@ from rest_framework import viewsets
 
 class ArticleViewSet(viewsets.ModelViewSet):
     serializer_class = ArticleSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     authentication_classes = (
         authentication.SessionAuthentication,
         authentication.TokenAuthentication,
